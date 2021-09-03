@@ -1,20 +1,19 @@
 //
-//  DoctorsTableViewCell.swift
+//  ReqResCellTableViewCell.swift
 //  Proekt-AMU
 //
-//  Created by Angela Tasikj on 8/20/21.
+//  Created by Angela Tasikj on 8/24/21.
 //  Copyright © 2021 Angela Tasikj. All rights reserved.
 //
 
 import UIKit
 
-class DoctorsTableViewCell: UITableViewCell {
+class ReqResCellTableViewCell: UITableViewCell {
 
-    
+    @IBOutlet weak var Datum: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        //button.setTitleColor(, for: .normal)
         // Initialization code
     }
 

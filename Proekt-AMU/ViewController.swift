@@ -35,10 +35,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
         print("tipkorisnik: doktor")
         TipKorisnik.text = "Doctor"
         TipKorisnik.isHidden = true
-        Doctor.isHidden = true
-        Citizen.isHidden = true
+        //Doctor.isHidden = true
+        //Citizen.isHidden = true
+        Opis1.isHidden = true
+        Opis2.isHidden = false
+        Opis2.text = "       You will be registered as a Doctor"
+        print("se izvrsuva se vo DoctButton")
         
     }
+    
+    
  
     @IBAction func CitizenButton(_ sender: Any) {
         print("tipkorisnik: citizen")
@@ -46,8 +52,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
         //self.Citizen.backgroundColor = UIColor.green
         TipKorisnik.text = "Citizen"
         TipKorisnik.isHidden = true
-        Doctor.isHidden = true
-        Citizen.isHidden = true
+        Opis1.isHidden = true
+        Opis2.isHidden = false
+        Opis2.text = "       You will be registered as a Citizen"
+        print("se izvrsuva se vo CitizenButton")
     }
     @IBAction func LoginAction(_ sender: Any) {
         if signUpMode{
@@ -132,7 +140,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func SwitchSignUpAction(_ sender: Any) {
         if signUpMode {
+            
             signUpMode = false
+            print("kliknato za da premine na login")
             LogInOutlet.setTitle("Login", for: .normal)
             SwitchSignUp.setTitle("Switch to Sign Up", for: .normal)
             NameSurname.isHidden = true
@@ -141,27 +151,59 @@ class ViewController: UIViewController, UITextFieldDelegate {
             TipKorisnik.isHidden = true
             Citizen.isHidden = true
             Doctor.isHidden = true
+            
             Opis1.isHidden = true
             Opis2.isHidden = true
-            
-            
-            
+
         }else{
+            
+            print("kliknato za da premine na signup")
             signUpMode = true
             LogInOutlet.setTitle("Sign Up", for: .normal)
             SwitchSignUp.setTitle("Switch to Log In", for: .normal)
+            NameSurname.text = ""
+            IDNumber.text = " "
+            PhoneNumber.text = " "
+            Email.text = " "
+            Password.text  = " "
             NameSurname.isHidden = false
             IDNumber.isHidden = false
             PhoneNumber.isHidden = false
             TipKorisnik.isHidden = true
             Citizen.isHidden = false
             Doctor.isHidden = false
-            Opis1.isHidden = false
-            Opis2.isHidden = false
+            //Opis1.isHidden = false
+            //Opis2.isHidden = false
+            proverka()
+            /*
+            if TipKorisnik.text == "Citizen" {
+                
+                print("kliknato za da premine na signup-kliknat citizen")
+                Citizen.isHidden = true
+                Doctor.isHidden = true
+                Opis1.isHidden = true
+                Opis2.text = "You will be registered as a Citizen"
+            }else if TipKorisnik.text == "Doctor"{
+                
+                print("kliknato za da premine na signup,kliknat doctor")
+                Citizen.isHidden = true
+                Doctor.isHidden = true
+                Opis1.isHidden = true
+                Opis2.text = "You will be registered as a Doctor"
+            }else{
+                
+                print("kliknato za da premine na signup-nisho kliknato")
+                Citizen.isHidden = false
+                Doctor.isHidden = false
+                Opis1.isHidden = false
+                Opis2.isHidden = false
+            }
+            */
         }
     }
     override func viewDidAppear(_ animated: Bool) {
         if signUpMode == false {
+            print("viewDidAp: vo login delot")
             NameSurname.isHidden = true
             IDNumber.isHidden = true
             PhoneNumber.isHidden = true
@@ -171,15 +213,42 @@ class ViewController: UIViewController, UITextFieldDelegate {
             Opis1.isHidden = true
             Opis2.isHidden = true
         }else{
+            print("viewDidAp: vo signup delot")
+            
             Opis1.isHidden = false
             Opis2.isHidden = false
             NameSurname.isHidden = false
             IDNumber.isHidden = false
             PhoneNumber.isHidden = false
             TipKorisnik.isHidden = true
+            /*
+            if TipKorisnik.text == "Citizen" {
+                print("viewDidAp: vo signup delot-KLIK citizen")
+                Citizen.isHidden = true
+                Doctor.isHidden = true
+                Opis1.isHidden = true
+                Opis2.isHidden = false
+                Opis2.text = "You will be registered as a Citizen"
+            }else if TipKorisnik.text == "Doctor"{
+                print("viewDidAp: vo signup delot-KLIK doct")
+                Citizen.isHidden = true
+                Doctor.isHidden = true
+                Opis1.isHidden = true
+                Opis2.isHidden = false
+                Opis2.text = "You will be registered as a Doctor"
+            }else{
+                
+                print("viewDidAp: vo signup delot-KLIK nisho")
+                Citizen.isHidden = false
+                Doctor.isHidden = false
+                Opis1.isHidden = false
+                Opis2.isHidden = false
+            }
+ */
             Citizen.isHidden = false
             Doctor.isHidden = false
-        }
+            //proverka()
+    }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -199,6 +268,23 @@ class ViewController: UIViewController, UITextFieldDelegate {
         // Do any additional setup after loading the view.
     }
 
-
+    func proverka() {
+        if(TipKorisnik.text == "Citizen") {
+            //Opis2.text = "regg as a citizen"
+            Opis1.isHidden = false
+            Opis2.isHidden = false
+            Opis2.text = "any,you will be registered as a regular user."
+        }else if (TipKorisnik.text == "Doctor"){
+            Opis1.isHidden = false
+            Opis2.isHidden = false
+             Opis2.text = "any,you will be registered as a regular user."
+            //Opis2.text = "regg as a citizen"
+        }else{
+            Opis1.isHidden = false
+            Opis2.isHidden = false
+            Opis2.text = "any,you will be registered as a regular user."
+        }
+    }
+    
 }
 

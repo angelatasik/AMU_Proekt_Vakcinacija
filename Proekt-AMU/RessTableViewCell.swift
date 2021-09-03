@@ -1,20 +1,16 @@
 //
-//  DoctorsTableViewCell.swift
-//  Proekt-AMU
+//  RessTableViewCell.swift
+//  
 //
-//  Created by Angela Tasikj on 8/20/21.
-//  Copyright © 2021 Angela Tasikj. All rights reserved.
+//  Created by Angela Tasikj on 8/28/21.
 //
 
 import UIKit
 
-class DoctorsTableViewCell: UITableViewCell {
+class RessTableViewCell: UITableViewCell {
 
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
-        //button.setTitleColor(, for: .normal)
         // Initialization code
     }
 

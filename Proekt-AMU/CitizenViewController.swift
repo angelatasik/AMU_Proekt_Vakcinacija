@@ -13,6 +13,7 @@ class CitizenViewController: UIViewController, MKMapViewDelegate, CLLocationMana
     
     @IBOutlet weak var Mapa: MKMapView!
     
+    @IBOutlet weak var labelaa: UILabel!
     @IBOutlet weak var PickerView: UIPickerView!
     var pickerData:[String] = [String]()
     
@@ -20,11 +21,14 @@ class CitizenViewController: UIViewController, MKMapViewDelegate, CLLocationMana
     var locationChosen = Bool()
     var lat = Double()
     var long = Double()
+    
     //var manager = CLLocationManager()
+    var vakcina = String()
     
     //var locationChosen = Bool()
     
     var firstLastNames = [String]()
+    var gradovi = [String]()
     
     var doctorsIds = [String]()
     @IBOutlet weak var Bolesti: UITextField!
@@ -36,9 +40,19 @@ class CitizenViewController: UIViewController, MKMapViewDelegate, CLLocationMana
     var doctors = [String]()
     var select = String()
     
+    
+    @IBAction func Req(_ sender: Any) {
+        self.performSegue(withIdentifier: "ToReqSeg", sender: nil)
+    }
+    
     @IBAction func LogOut(_ sender: Any) {
         PFUser.logOut()
         navigationController?.dismiss(animated: true, completion: nil)
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        vakcina = pickerData[row]
+        
+        print(vakcina)
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -57,12 +71,7 @@ class CitizenViewController: UIViewController, MKMapViewDelegate, CLLocationMana
     }
     
     
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        
-        //select = doctors[row]
-        select = pickerData[row]
-        //raft = types[row]
-    }
+ 
    
    
     override func viewDidLoad() {
@@ -76,7 +85,7 @@ class CitizenViewController: UIViewController, MKMapViewDelegate, CLLocationMana
         self.PickerView.dataSource = self
         //doctors.removeAll()
         
-        let query = PFUser.query()
+      //  let query = PFUser.query()
         
     
         
@@ -143,43 +152,7 @@ class CitizenViewController: UIViewController, MKMapViewDelegate, CLLocationMana
             }
         }
     }
-    /*
-    @IBAction func PrikazMajstori(_ sender: Any) {
-        
-            print("vlaga vo prikaz na majstori")
-            firstLastNames.removeAll()
-            bolesti = Bolesti.text!
-        
-            let query = PFUser.query()
-
-            query?.whereKey("NameSurname", equalTo: "Doctor" as? String)
-            print("kreira query")
-            query?.findObjectsInBackground(block: { (object, error) in
-                if error != nil{
-                    print(error?.localizedDescription)
-                }
-                else if let doktori = object{
-                    for o in doktori{
-                        if let doktor = o as? PFUser {
-                            print("pocnuva da zima od objektot")
-                            if let firstLastName = doktor["firstLastName"]{
-                                
-                                    print("gi stava")
-                                    self.firstLastNames.append(firstName as! String)
-                                
-                                    print("gi stavi")
-                                }
-                            }
-                        }
-                    }
-                }
-                self.performSegue(withIdentifier: "ViewDoctorsSeg", sender: nil)
-            })
-            
-        }
-        
-    }
-    */
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ViewDoctorsSeg" {
             let destinationVC = segue.destination as! FamilyDoctorsController
@@ -188,6 +161,8 @@ class CitizenViewController: UIViewController, MKMapViewDelegate, CLLocationMana
             destinationVC.bolest = bolesti
             destinationVC.lat = lat
             destinationVC.lon = long
+            destinationVC.vakcina = vakcina
+
         }
     }
     
@@ -207,7 +182,7 @@ class CitizenViewController: UIViewController, MKMapViewDelegate, CLLocationMana
         print("vlaga vo prikaz na doktori")
         firstLastNames.removeAll()
         bolesti = Bolesti.text!
-        
+        //var Vakcina = vakcina
         let query = PFUser.query()
         
         query?.whereKey("tipKorisnik", equalTo: "Doctor" as? String)
@@ -221,11 +196,18 @@ class CitizenViewController: UIViewController, MKMapViewDelegate, CLLocationMana
                     if let doktor = o as? PFUser {
                         print("pocnuva da zima od objektot")
                         if let firstLastName = doktor["firstLastName"]{
+                            //if let vakcin = doktor["Vakcina"]{
+                                
+                                print("gi stava")
+                                self.firstLastNames.append(firstLastName as! String)
+                                //self.gradovi.append(grad as! String)
+                                //print(firstLastName)
+                                
+//                                self.vakcina.append(vakcin as! String)
+  //                              print("ja stavi vakcinata")
+
                             
-                            print("gi stava")
-                            self.firstLastNames.append(firstLastName as! String)
-                            //print(firstLastName)
-                            print("gi stavi")
+                            
                         }
                     }
                 }
@@ -233,27 +215,6 @@ class CitizenViewController: UIViewController, MKMapViewDelegate, CLLocationMana
                 self.performSegue(withIdentifier: "ViewDoctorsSeg", sender: nil)
         })
     }
-        /*
-        query?.findObjectsInBackground(block: { (object, error) in
-            if error != nil{
-                print(error?.localizedDescription)
-            }
-            else if let doktori = object{
-                for o in doktori{
-                    if let doktor = o as? PFUser {
-                        print("pocnuva da zima od objektot")
-                        if let firstLastName = doktor["firstLastName"]{
-                            
-                            print("gi stava")
-                            self.firstLastNames.append(firstName as! String)
-                            
-                            print("gi stavi")
-                        }
-                    }
-                }
-            }
-        }
-            self.performSegue(withIdentifier: "ViewDoctorsSeg", sender: nil)
-    })*/
+    
 
 }

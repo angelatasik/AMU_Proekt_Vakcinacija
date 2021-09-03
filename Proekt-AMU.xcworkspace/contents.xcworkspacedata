@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/angelatasikj/Desktop/Proekt-AMU/Proekt-AMU/RessTableViewCell.swift">
+   </FileRef>
+   <FileRef
       location = "group:/Users/angelatasikj/Desktop/Proekt-AMU/Proekt-AMU/CitizenViewController.swift">
    </FileRef>
    <FileRef

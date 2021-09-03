@@ -24,6 +24,16 @@
 		70075D0C26D0858C009B3E70 /* DoctorsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70075D0B26D0858C009B3E70 /* DoctorsTableViewCell.swift */; };
 		70075D0E26D0A429009B3E70 /* CitizenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70075D0D26D0A429009B3E70 /* CitizenViewController.swift */; };
 		70075D1026D0A42D009B3E70 /* CitizenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70075D0F26D0A42D009B3E70 /* CitizenViewController.swift */; };
+		707B545026DA41EC00FC0F03 /* ResservationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707B544F26DA41EC00FC0F03 /* ResservationsTableViewController.swift */; };
+		707B545226DA426C00FC0F03 /* RessTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707B545126DA426C00FC0F03 /* RessTableViewCell.swift */; };
+		707B545426DA44FE00FC0F03 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707B545326DA44FE00FC0F03 /* DetailViewController.swift */; };
+		707B545626DA6E5B00FC0F03 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707B545526DA6E5B00FC0F03 /* MapViewController.swift */; };
+		70FBD74026D3CFB500AFF8C4 /* MakeReqViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FBD73F26D3CFB500AFF8C4 /* MakeReqViewController.swift */; };
+		70FBD74426D3E94A00AFF8C4 /* CitizenDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FBD74326D3E94A00AFF8C4 /* CitizenDetailsViewController.swift */; };
+		70FBD74626D4EE4200AFF8C4 /* ReqResTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FBD74526D4EE4100AFF8C4 /* ReqResTableViewController.swift */; };
+		70FBD74826D4F10C00AFF8C4 /* ReqResCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FBD74726D4F10C00AFF8C4 /* ReqResCellTableViewCell.swift */; };
+		70FC235D26D79C48000C7EBE /* RezzTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FC235C26D79C48000C7EBE /* RezzTableViewController.swift */; };
+		70FC235F26D7AA1B000C7EBE /* RezzDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FC235E26D7AA1B000C7EBE /* RezzDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +56,16 @@
 		70075D0B26D0858C009B3E70 /* DoctorsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorsTableViewCell.swift; sourceTree = "<group>"; };
 		70075D0D26D0A429009B3E70 /* CitizenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CitizenViewController.swift; path = "/Users/angelatasikj/Desktop/Proekt-AMU/Proekt-AMU/CitizenViewController.swift"; sourceTree = "<absolute>"; };
 		70075D0F26D0A42D009B3E70 /* CitizenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CitizenViewController.swift; path = "/Users/angelatasikj/Desktop/Proekt-AMU/Proekt-AMU/CitizenViewController.swift"; sourceTree = "<absolute>"; };
+		707B544F26DA41EC00FC0F03 /* ResservationsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResservationsTableViewController.swift; sourceTree = "<group>"; };
+		707B545126DA426C00FC0F03 /* RessTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RessTableViewCell.swift; path = "/Users/angelatasikj/Desktop/Proekt-AMU/Proekt-AMU/RessTableViewCell.swift"; sourceTree = "<absolute>"; };
+		707B545326DA44FE00FC0F03 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		707B545526DA6E5B00FC0F03 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		70FBD73F26D3CFB500AFF8C4 /* MakeReqViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeReqViewController.swift; sourceTree = "<group>"; };
+		70FBD74326D3E94A00AFF8C4 /* CitizenDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitizenDetailsViewController.swift; sourceTree = "<group>"; };
+		70FBD74526D4EE4100AFF8C4 /* ReqResTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReqResTableViewController.swift; sourceTree = "<group>"; };
+		70FBD74726D4F10C00AFF8C4 /* ReqResCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReqResCellTableViewCell.swift; sourceTree = "<group>"; };
+		70FC235C26D79C48000C7EBE /* RezzTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RezzTableViewController.swift; sourceTree = "<group>"; };
+		70FC235E26D7AA1B000C7EBE /* RezzDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RezzDetailsViewController.swift; sourceTree = "<group>"; };
 		A9FA1AAC2531B04928E20413 /* Pods_Proekt_AMU.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Proekt_AMU.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED127F66406A331255FD263D /* Pods-Proekt-AMU.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Proekt-AMU.debug.xcconfig"; path = "Target Support Files/Pods-Proekt-AMU/Pods-Proekt-AMU.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,10 +114,20 @@
 			children = (
 				70075CE626B4C091009B3E70 /* AppDelegate.swift */,
 				70075D0F26D0A42D009B3E70 /* CitizenViewController.swift */,
+				707B545126DA426C00FC0F03 /* RessTableViewCell.swift */,
+				707B544F26DA41EC00FC0F03 /* ResservationsTableViewController.swift */,
+				707B545326DA44FE00FC0F03 /* DetailViewController.swift */,
+				70FC235C26D79C48000C7EBE /* RezzTableViewController.swift */,
 				70075CE826B4C092009B3E70 /* ViewController.swift */,
 				70075D0D26D0A429009B3E70 /* CitizenViewController.swift */,
 				70075CFF26C09F72009B3E70 /* logo.jpg */,
 				70075CEA26B4C092009B3E70 /* Main.storyboard */,
+				707B545526DA6E5B00FC0F03 /* MapViewController.swift */,
+				70FC235E26D7AA1B000C7EBE /* RezzDetailsViewController.swift */,
+				70FBD74726D4F10C00AFF8C4 /* ReqResCellTableViewCell.swift */,
+				70FBD74526D4EE4100AFF8C4 /* ReqResTableViewController.swift */,
+				70FBD74326D3E94A00AFF8C4 /* CitizenDetailsViewController.swift */,
+				70FBD73F26D3CFB500AFF8C4 /* MakeReqViewController.swift */,
 				70075D0B26D0858C009B3E70 /* DoctorsTableViewCell.swift */,
 				70075D0926D0818D009B3E70 /* FamilyDoctorsController.swift */,
 				70075D0726CF9E3D009B3E70 /* DoctorsTableViewController.swift */,
@@ -242,13 +272,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				70075D0A26D0818D009B3E70 /* FamilyDoctorsController.swift in Sources */,
+				707B545426DA44FE00FC0F03 /* DetailViewController.swift in Sources */,
+				70FBD74426D3E94A00AFF8C4 /* CitizenDetailsViewController.swift in Sources */,
+				707B545226DA426C00FC0F03 /* RessTableViewCell.swift in Sources */,
 				70075CE926B4C092009B3E70 /* ViewController.swift in Sources */,
 				70075CE726B4C091009B3E70 /* AppDelegate.swift in Sources */,
 				70075D1026D0A42D009B3E70 /* CitizenViewController.swift in Sources */,
 				70075D0C26D0858C009B3E70 /* DoctorsTableViewCell.swift in Sources */,
+				70FC235F26D7AA1B000C7EBE /* RezzDetailsViewController.swift in Sources */,
 				70075D0826CF9E3D009B3E70 /* DoctorsTableViewController.swift in Sources */,
+				70FBD74826D4F10C00AFF8C4 /* ReqResCellTableViewCell.swift in Sources */,
+				70FBD74026D3CFB500AFF8C4 /* MakeReqViewController.swift in Sources */,
 				70075D0E26D0A429009B3E70 /* CitizenViewController.swift in Sources */,
+				707B545626DA6E5B00FC0F03 /* MapViewController.swift in Sources */,
+				70FC235D26D79C48000C7EBE /* RezzTableViewController.swift in Sources */,
+				707B545026DA41EC00FC0F03 /* ResservationsTableViewController.swift in Sources */,
 				70075CEF26B4C092009B3E70 /* Proekt_AMU.xcdatamodeld in Sources */,
+				70FBD74626D4EE4200AFF8C4 /* ReqResTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
